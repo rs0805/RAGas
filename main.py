@@ -1,11 +1,25 @@
+# %%
 from build_dataset import build_dataset
 from evaluation import run_evaluation
+from IPython.display import display
 
-def main():
-    dataset = build_dataset()
-    df = run_evaluation(dataset)
-    print("\nEvaluation Results:\n")
-    print(df)
+# %%
+dataset = build_dataset()
+df = run_evaluation(dataset)
 
-if __name__ == "__main__":
-    main()
+# %%
+styled = (
+    df.style
+    .background_gradient(
+        subset=[
+            "context_precision",
+            "context_recall",
+            "faithfulness",
+            "answer_relevancy"
+        ],
+        cmap="RdYlGn"
+    )
+)
+
+display(styled)
+# %%

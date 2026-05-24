@@ -1,5 +1,4 @@
 from dotenv import load_dotenv, find_dotenv
-
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from load_data import load_chunks

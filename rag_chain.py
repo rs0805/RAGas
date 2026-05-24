@@ -1,8 +1,7 @@
 from langchain_openai import ChatOpenAI  
-from langchain_core.prompts import ChatPromptTemplate          # changed
-from langchain_core.runnables import RunnablePassthrough       # changed
+from langchain_core.prompts import ChatPromptTemplate          
+from langchain_core.runnables import RunnablePassthrough       
 from langchain_core.output_parsers import StrOutputParser
-
 from vector_store import build_retriever
 
 def create_rag_chain():
