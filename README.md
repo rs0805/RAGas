@@ -80,7 +80,6 @@ One important feature is:
 
 This means most metrics do NOT require human-written answers (ground truth labels), making evaluation scalable and automated.
 
----
 
 ### RAGAS Metrics
 
