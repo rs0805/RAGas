@@ -2,8 +2,6 @@
 
 A simple Retrieval-Augmented Generation (RAG) project built using LangChain, ChromaDB, OpenAI, and RAGAS.
 
----
-
 ## Features
 
 * Loads and chunks text documents
@@ -11,8 +9,6 @@ A simple Retrieval-Augmented Generation (RAG) project built using LangChain, Chr
 * Stores vectors in ChromaDB
 * Builds a RAG pipeline using LangChain
 * Evaluates responses using RAGAS metrics
-
----
 
 # Theory
 
@@ -30,8 +26,6 @@ But they still have limitations:
 * they may not know your company’s private data
 * they may not know recent information
 * they can make up facts confidently
-
----
 
 ## 2. RAG Workflow
 
@@ -58,8 +52,6 @@ are inserted into a prompt template.
 
 The augmented prompt is sent to the LLM, which generates the final answer.
 
----
-
 ### Full RAG Flow
 
 ```text
@@ -77,8 +69,6 @@ Send Prompt to LLM
     ↓
 Generate Final Answer
 ```
-
----
 
 ## 3. RAGAS Evaluation
 
@@ -99,16 +89,12 @@ This means most metrics do NOT require human-written answers (ground truth label
 * **Contexts** → Retrieved chunks/passages used by the LLM to answer.
 * **Ground Truth** → Human-written correct answer used for evaluation.
 
----
-
 ### Evaluation Metrics
 
 * **Context Precision** → Measures how much of the retrieved context was actually useful and relevant.
 * **Context Recall** → Measures whether all important information needed for the answer was successfully retrieved.
 * **Faithfulness** → Measures whether the generated answer stays truthful to the retrieved context without hallucinating.
 * **Answer Relevancy** → Measures how completely and accurately the answer addresses the user’s question.
-
----
 
 ### Evaluation Types
 
